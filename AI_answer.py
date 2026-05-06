@@ -20,3 +20,5 @@ def ai_answer(transcript, question):
     ])
     
     return response['message']['content']
+# shit shit shit
+
