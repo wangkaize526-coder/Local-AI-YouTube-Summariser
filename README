@@ -1,0 +1,59 @@
+# YouTube Summarizer
+
+A local AI project that runs on your own computer using Ollama and Streamlit.
+
+## Requirements
+
+Install the following Python packages:
+
+```bash
+pip install streamlit youtube-transcript-api ollama
+```
+
+Also install and run Ollama as the local AI engine.
+
+## How to Run
+
+1. Start the Ollama service:
+
+```bash
+ollama serve
+```
+
+2. If needed, launch the model engine (for example, `llama3.2`):
+
+```bash
+ollama run llama3.2
+```
+
+3. Run the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
+## What the App Does
+
+The app takes a YouTube URL from the user and extracts the video ID.
+
+For example:
+
+- URL: `https://www.youtube.com/watch?v=DzfdLu_f4kg`
+- Video ID: `DzfdLu_f4kg`
+
+## How It Works
+
+1. Get the YouTube URL from the user.
+2. Extract the `video_id` from the URL.
+3. Create an API object for transcript access.
+4. List all available transcript tracks.
+5. Download the selected transcript text using `fetch()`.
+6. Send the transcript text to the AI model for summarization.
+7. Return the AI-generated summary to the user.
+
+## Notes
+
+- The README explains the project setup and how the app processes the YouTube URL.
+- UI code is not described here; the focus is on setup and URL processing.
+
+
